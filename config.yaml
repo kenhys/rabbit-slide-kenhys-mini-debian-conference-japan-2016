@@ -1,12 +1,15 @@
 ---
-id: rabbit-slide-kenhys-mini-debian-conference-japan-2016
+id: mini-debian-conference-japan-2016
 base_name: minidebconfjp2016
 tags:
+- debian
 - rabbit
 - firefox
-presentation_date: 
-version: 1.0.0
-licenses: []
+presentation_date: 2016-12-10
+version: 2016.12.10.1
+licenses: [
+- CC-BY-SA-4.0
+]
 slideshare_id: 
 speaker_deck_id: 
 ustream_id: 
@@ -17,5 +20,5 @@ author:
   name: Kentaro Hayashi
   email: kenhys@gmail.com
   rubygems_user: kenhys
-  slideshare_user: 
+  slideshare_user: kenhys
   speaker_deck_user: 
