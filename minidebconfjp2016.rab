@@ -1,19 +1,19 @@
-= タイトル
+= DebianでFirefoxを\nカスタマイズするには
 
-# : subtitle
-#    サブタイトル
+: subtitle
+   How to customize Firefox on Debian
 : author
    Kentaro Hayashi
-# : institution
-#    所属
-# : content-source
-#    イベント名
-# : date
-#    2016-11-22
-# : allotted-time
-#    5m
-# : theme
-#    default
+: institution
+   ClearCode, Inc
+: content-source
+   Mini Debian Conference Japan 2016
+: date
+   2016-12-10
+: allotted-time
+   30m
+: theme
+   .
 
 = 最初のスライド
 
