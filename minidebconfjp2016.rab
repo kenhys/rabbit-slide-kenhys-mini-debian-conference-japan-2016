@@ -5,7 +5,7 @@
 : author
    Kentaro Hayashi
 : institution
-   ClearCode, Inc
+   ClearCode Inc.
 : content-source
    Mini Debian Conference Japan 2016
 : date
@@ -15,14 +15,42 @@
 : theme
    .
 
-= 最初のスライド
-
-  * 項目1
-  * 項目2
-  * 項目3
-
-= 二番目のスライド
+= 自己紹介(1)\n(('note:Profile'))
 
   # image
-  # src = https://raw.github.com/rabbit-shocker/rabbit/master/sample/lavie.png
-  # relative_height = 100
+  # relative-height = 40
+  # src = https://pbs.twimg.com/profile_images/2290018079/cvcy12slbeva80jboxzf_400x400.png
+
+* Twitter/GitHub: @kenhys
+* 所属: ((*トラックポイント・ソフトドーム派*))
+
+= 自己紹介(2)\n(('note:Profile'))
+
+  # image
+  # relative-height = 60
+  # src = images/track-points.png
+
+* トラックポイント・ソフトドーム派
+
+= 参考画像の出典
+
+  # image
+  # relative-height = 80
+  # src = images/irasutoya.png
+
+* http://www.irasutoya.com/
+
+= パッケージ関連の活動\n(('note:As a contributor'))
+
+* groonga (全文検索エンジン)
+* groonga-normalizer-mysql
+* libhinawa
+* fcitx-imlist
+* hal-flash (Flashを延命させるアレ)
+* growl-for-linux
+
+= 閑話休題
+
+(('tag:center'))
+そろそろ本題に\n(('note:Back on topic'))
+
