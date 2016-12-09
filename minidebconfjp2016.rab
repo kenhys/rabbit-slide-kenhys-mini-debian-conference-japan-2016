@@ -98,7 +98,7 @@
 
 * 設定メニューからオプションを変更\n(('note:Tweak via options'))
 * アドオンをインストール\n(('note:Install addons'))
-* *.jsを修正する\n(('note:Modify *.js'))
+* user.jsを修正する\n(('note:Modify user.js'))
 * about:config\n(('note:Modify via about:config'))
 
 = カスタマイズいろいろ\n(('note:Customizing ...'))
@@ -194,7 +194,7 @@
 
 * 設定メニューからオプションを変更\n(('note:Tweak via options'))
 * アドオンをインストール\n(('note:Install addons'))
-* ((*user.jsを修正する\n(('note:Modify *.js'))*))
+* ((*user.jsを修正する\n(('note:Modify user.js'))*))
 * about:config\n(('note:Modify via about:config'))
 
 = user.jsを修正する\n(('note:Modify user.js'))
