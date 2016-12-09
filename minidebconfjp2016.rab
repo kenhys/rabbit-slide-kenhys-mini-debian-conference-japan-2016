@@ -91,3 +91,210 @@
   # src = images/popcorn-firefox-esr.png
 
 = 会場のみなさんに質問
+
+(('tag:center'))Firefoxカスタマイズしていますか？
+
+= カスタマイズいろいろ\n(('note:Customizing ...'))
+
+* 設定メニューからオプションを変更\n(('note:Tweak via options'))
+* アドオンをインストール\n(('note:Install addons'))
+* *.jsを修正する\n(('note:Modify *.js'))
+* about:config\n(('note:Modify via about:config'))
+
+= カスタマイズいろいろ\n(('note:Customizing ...'))
+
+* 設定メニューからオプションを変更\n(('note:Tweak via options'))
+* ((*アドオンをインストール\n(('note:Install addons'))*))
+* *.jsを修正する\n(('note:Modify *.js'))
+* about:config\n(('note:Modify via about:config'))
+
+= アドオンをインストール\n(('note:Install addons'))
+
+  # image
+  # relative-height = 80
+  # src = images/addons-mozilla.png
+
+* https://addons.mozilla.org/en-US/firefox/
+
+= 必須のアドオン\n(('note:Must install these addons'))
+
+* Tab Groups
+* ツリー型タブ\n(('note:Tree Style Tab'))
+* Vimperator
+
+注:個人の感想です。
+
+= アドオン on debian\n(('note: Addons on debian'))
+
+  $ apt search xul | grep xul-ext | wc -l
+  79
+
+* aptでインストール可能なパッケージがこれだけある
+
+= aptでインストール\n(('note:Easy to install by apt'))
+
+  $ sudo apt install xul-ext-iceweasel-branding
+
+= Iceweasel風Firefox\n(('note:Mimic iceweasel'))
+
+  # image
+  # relative-height = 80
+  # src = images/iceweasel-branding.png
+
+* Firefoxを使っていたと思ったらIceweaselだった
+
+= インストールのされかた\n(('note:How xpi is installed?'))
+
+* xpiそのままインストール\n(('note:installl xpi as is'))
+* 展開済みのaddonとしてインストール\n(('note:unpacked addons'))
+
+= 拡張はどこに？\n(('note:Where is extension installed?'))
+
+  $ dpkg -S /usr/lib/firefox/browser/extensions/\{972ce4c6-7e08-4474-a285-3208198ce6fd\}.xpi
+  firefox: /usr/lib/firefox/browser/extensions/{972ce4c6-7e08-4474-a285-3208198ce6fd}.xpi
+
+* デフォルトのテーマは\nxpiとしてインストールされている
+
+= 拡張はどこに？\n(('note:Where is extension installed?'))
+
+* /usr/share/xul-ext/iceweasel-brandingに展開
+
+    /usr/share/xul-ext/iceweasel-branding
+    ├── chrome
+    │   ├── content
+    │   │   ├── about-logo.png
+    │   │   ├── about-logo@2x.png
+    │   │   ├── about-wordmark.png
+    │   │   ├── about-wordmark.svg
+    │   │   ├── about.png
+    │   │   ├── aboutDialog.css
+    │   │   ├── aboutIceweasel
+    │   │   │   ├── aboutIce.js
+    │   │   │   ├── aboutIce.manifest
+    │   │   │   └── ice.xhtml
+    │   │   ├── browser-overlay.css
+    │   │   ├── icon128.png
+    │   │   ├── icon16.png
+    │   │   ├── icon32.png
+    │   │   ├── icon48.png
+    │   │   ├── icon64.png
+    │   │   └── unofficial
+    │   │       ├── identity-icons-brand.svg
+    │   │       └── silhouette-40.svg
+    │   └── locale
+    │       ├── brand.dtd
+    │       ├── brand.properties
+    │       └── ice.dtd
+    ├── chrome.manifest
+    ├── icon.png
+    ├── icon64.png
+    └── install.rdf
+
+= カスタマイズいろいろ\n(('note:Customizing ...'))
+
+* 設定メニューからオプションを変更\n(('note:Tweak via options'))
+* アドオンをインストール\n(('note:Install addons'))
+* ((*user.jsを修正する\n(('note:Modify *.js'))*))
+* about:config\n(('note:Modify via about:config'))
+
+= user.jsを修正する\n(('note:Modify user.js'))
+
+* 伝統的なカスタマイズ方法\n(('note: Traditional way to customize'))
+* ~/.mozilla/(プロファイル)/user.jsに置く\n(('note:Put user.js as ~/mozilla/(profile)/user.js'))
+
+= user.jsの例\n(('note:Example how to use user.js'))
+
+   # enscript javascript
+   user_pref("browser.tabs.closeWindowWithLastTab", false);
+
+最後のタブを閉じたときにウィンドウを閉じない\n(('note:Do not close window even though last tab is closed'))
+
+= 組織向けにFirefoxを(('note:Firefox for organizations'))
+
+* 個人なら好きカスタマイズ
+* 組織利用はまた別の話に
+
+での利用は= 組織内向けカスタマイズ(('note:How to customize for organization'))
+
+https://www.mozilla.jp/business/
+
+= 参考記事の紹介\n(('note:Blog entry how to customize'))
+
+「Firefox・Thunderbirdの組織内向けカスタマイズの方法の簡単な紹介と比較」
+* http://www.clear-code.com/blog/2014/3/27.html
+
+= McD?
+
+    # image
+    # relative-height = 80
+    # src = https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/274px-McDonald%27s_Golden_Arches.svg.png
+
+https://en.wikipedia.org/wiki/McDonald's より引用
+
+= McDとは?\n(('note: What is McD?'))
+
+* McD != マクドナルド\n(('note:McD is not McDonald's'))
+
+実際にカスタマイズする方法を説明する
+
+
+= Debian固有の設定\n(('note:Debian specific configuration'))
+
+* 設定ファイルの場所
+
+  /usr/lib/firefox/browser/defaults/syspref/firefox.js
+  -> /etc/firefox/firefox.js
+
+= 設定方法いろいろ
+
+* pref('...')
+* sticky_pref('...')
+* lockPref('...')
+
+
+= Debian固有の設定\n(('note:Debian specific configuration'))
+
+* 拡張の更新を有効
+
+   pref("extensions.update.enabled", true);
+
+= Debian固有の設定:ロケール
+
+* LANGに応じてロケールを設定\n
+  (('note:use LANG environment variable to choose locale'))
+
+   pref("intl.locale.matchOS", true);
+
+= ab
+
+// Disable default browser checking.
+pref("browser.shell.checkDefaultBrowser", false);
+
+// Disable openh264.
+pref("media.gmp-gmpopenh264.enabled", false);
+
+// Default to classic view for about:newtab
+sticky_pref("browser.newtabpage.enhanced", false);
+
+// Disable health report upload
+pref("datareporting.healthreport.uploadEnabled", false);
+
+= IcedTeaプラグインを無効にするやり方を説明しよう
+
+= カスタマイズするアドオンの使い方\n(('note:Addon tips'))
+
+* GlobalChrome.css
+* UI TextOverrider
+
+= GlobalChrome.css
+
+* メニュー表示をカスタマイズ可能
+
+= UI Text overrider
+
+* ショートカットのカスタマイズ可能
+* メニューのカスタマイズ可能
+
+= Force Addon Status
+
+a
