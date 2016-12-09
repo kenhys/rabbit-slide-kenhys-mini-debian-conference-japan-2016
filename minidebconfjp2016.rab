@@ -272,6 +272,31 @@
     # enscript javascript
     pref("datareporting.healthreport.uploadEnabled", false);
 
+= 設定方法いろいろ\n(('note:pref(...) family'))
+
+* defaultPref('...')
+* lockPref('...')
+* pref('...')
+* sticky_pref('...')
+
+= defaultPref('...')
+
+* 初期設定値を指定
+* prefs.jsには原則保存されない
+
+= lockPref('...')
+
+* 設定を変更させない
+
+= pref('...')
+
+* ユーザーが変更可能
+
+= sticky_pref('...')
+
+* prefs.jsにデフォルト値に関わらず保存
+  * 通常は設定を変更したらprefs.jsに保存
+
 = 組織向けにFirefoxを(('note:Firefox for organizations'))
 
 * 個人なら好きカスタマイズ
