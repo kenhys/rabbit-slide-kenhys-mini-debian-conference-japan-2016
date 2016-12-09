@@ -408,12 +408,11 @@ TODO:実際にカスタマイズする方法を説明する
 
 = GlobalChrome.css
 
-* メニュー表示をカスタマイズ可能
+* グローバルなユーザースタイルシート機能
 
-= UI Text overrider
+= UI Text Overrider
 
-* ショートカットのカスタマイズ可能
-* メニューのカスタマイズ可能
+* UI要素のラベルやツールチップテキストなどを変更
 
 = Force Addon Status
 
