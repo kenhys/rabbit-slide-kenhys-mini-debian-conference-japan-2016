@@ -54,3 +54,40 @@
 (('tag:center'))
 そろそろ本題に\n(('note:Back on topic'))
 
+= 会場のみなさんに質問
+
+(('tag:center'))ブラウザは何を使っていますか？
+
+= ブラウザシェア
+
+  # image
+  # relative-height = 80
+  # src = images/browser-share-2016.png
+
+* デスクトップにおけるシェアの推移(by StatCounter)
+
+= chromium on debian
+
+  # image
+  # relative-height = 100
+  # src = images/popcorn-chromium.png
+
+= firefox on debian
+
+  # image
+  # relative-height = 100
+  # src = images/popcorn-firefox.png
+
+= iceweasel on debian
+
+  # image
+  # relative-height = 100
+  # src = images/popcorn-iceweasel.png
+
+= firefox-esr on debian
+
+  # image
+  # relative-height = 100
+  # src = images/popcorn-firefox-esr.png
+
+= 会場のみなさんに質問
