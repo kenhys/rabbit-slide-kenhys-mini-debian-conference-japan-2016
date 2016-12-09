@@ -365,7 +365,7 @@ TODO:実際にカスタマイズする方法を説明する
 
 = customization-items.ods
 
-カスタマイズ事例をタブで分類
+カスタマイズ事例をシートで分類
 
 * customization-items
 * menuitem-shortcut-disable-items
@@ -373,7 +373,7 @@ TODO:実際にカスタマイズする方法を説明する
 
 = customization-items.ods
 
-カスタマイズ事例をタブで分類
+カスタマイズ事例をシートで分類
 
 * ((*customization-items*))
 * menuitem-shortcut-disable-items
@@ -389,7 +389,7 @@ TODO:実際にカスタマイズする方法を説明する
 
 = customization-items.ods
 
-カスタマイズ事例をタブで分類
+カスタマイズ事例をシートで分類
 
 * customization-items
 * ((*menuitem-shortcut-disable-items*))
@@ -403,7 +403,7 @@ TODO:実際にカスタマイズする方法を説明する
 
 = customization-items.ods
 
-カスタマイズ事例をタブで分類
+カスタマイズ事例をシートで分類
 
 * customization-items
 * menuitem-shortcut-disable-items
@@ -419,20 +419,116 @@ TODO:実際にカスタマイズする方法を説明する
 
 * カスタマイズ用のアドオンを活用\n
 
-= カスタマイズのアドオン\n(('note:Addon tips'))
+= カスタマイズのアドオン\n(('note:Addon to customize'))
 
 * GlobalChrome.css
 * UI Text Overrider
 * Force Addon Status
 
+= カスタマイズのアドオン\n(('note:Addon to customize'))
+
+* ((*GlobalChrome.css*))
+* UI Text Overrider
+* Force Addon Status
+
 = GlobalChrome.css
 
-* グローバルなユーザースタイルシート機能
+* ユーザースタイルシート機能\n(('note:Provides user stylesheet'))
+* https://addons.mozilla.org/ja/firefox/addon/globalchromecss/
+
+= カスタマイズのアドオン\n(('note:Addon to customize'))
+
+* GlobalChrome.css
+* ((*UI Text Overrider*))
+* Force Addon Status
 
 = UI Text Overrider
 
-* UI要素のラベルやツールチップテキストなどを変更
+* UI要素のラベルやツールチップテキストなどを変更\n(('note:Enable to customize UI labels, tooltips and so on'))
+* https://addons.mozilla.org/ja/firefox/addon/ui-text-overrider/
+
+
+= カスタマイズのアドオン\n(('note:Addon to customize'))
+
+* GlobalChrome.css
+* UI Text Overrider
+* ((*Force Addon Status*))
 
 = Force Addon Status
 
-a
+* アドオンの有効・無効の状態を強制的に変える機能
+
+https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
+
+= できること
+
+* 単機能アドオンの組み合わせでkiosk端末っぽく
+
+* 参考:全部入りのkioskモード
+  * https://addons.mozilla.org/ja/firefox/addon/mkiosk/
+
+= SecurityPanel非表示
+
+    # enscript stylesheet
+    @-moz-document
+    url-prefix("chrome://browser/content/preferences/in-content/preferences.xul"),
+    url-prefix("about:preferences") {
+      #category-security {
+        visibility: collapse !important;
+        -moz-user-focus: ignore !important;
+      }
+    }
+
+= 使い方(1)
+
+* 無効化する
+
+    # enscript javascript
+    // disable shortcuts and UI
+    var killedItems = [];
+    var killedItemsWithDelay = [];
+    var hiddenItemsWithDelay = [];
+
+= 使い方(2)
+
+    # enscript javascript
+    killedItems.push("...");
+
+= 使い方(3)
+
+    # enscript javascript
+    function setKillItemRule(aIdentifier, aSelector, aDelayed, aDisableCommand) {
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier, aSelector);
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".disabled", "true");
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".hidden", "true");
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".readonly", "true");
+      if (aDisableCommand) {
+        lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".command", "");
+        lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".oncommand", "");
+      }
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".always-hidden", "true");
+      lockPref("extensions.uitextoverrider@clear-code.com." + aIdentifier + ".delayed", aDelayed == true);
+    }
+    setKillItemRule("killedItems",          killedItems.join(","),          false, true);
+    setKillItemRule("killedItemsWithDelay", killedItemsWithDelay.join(","), true,  true);
+    setKillItemRule("hiddenItemsWithDelay", hiddenItemsWithDelay.join(","), true,  false);
+    
+
+= GlobalChrome.cssの例
+
+    # enscript css
+    @-moz-document url-prefix("chrome://browser/content/browser.xul") {
+      （セレクタ）,
+      /* MenuShortcut-common */
+      *[always-hidden="true"] {
+        display: none !important;
+        -moz-user-focus: ignore !important;
+      }
+    }
+
+= まとめ
+
+* 集中管理ならまずはMCDがよい
+* カスタマイズ専用アドオンが役立つ
+* 過去のノウハウは\n
+  firefox-support-commonをチェック
