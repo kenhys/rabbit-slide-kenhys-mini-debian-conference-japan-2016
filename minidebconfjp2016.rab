@@ -211,7 +211,7 @@
 = user.jsを修正する\n(('note:Modify user.js'))
 
 * 伝統的なカスタマイズ方法\n(('note: Traditional way to customize'))
-* ~/.mozilla/firefox/(プロファイル)/user.jsに置く\n(('note:Put user.js as ~/mozilla/(profile)/user.js'))
+* ~/.mozilla/firefox/(プロファイル)/user.jsに置く\n(('note:Put user.js as ~/mozilla/firefox/(profile)/user.js'))
 
 = user.jsの例\n(('note:Example how to customize user.js'))
 
