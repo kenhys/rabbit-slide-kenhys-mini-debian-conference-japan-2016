@@ -110,14 +110,14 @@
 * 設定メニューからオプションを変更\n(('note:Tweak via options'))
 * アドオンをインストール\n(('note:Install addons'))
 * user.jsを修正する\n(('note:Modify user.js'))
-* about:config\n(('note:Modify via about:config'))
+* システム全体の設定\n(('note:System-wide configuration'))
 
 = カスタマイズいろいろ\n(('note:Customizing ...'))
 
 * 設定メニューからオプションを変更\n(('note:Tweak via options'))
 * ((*アドオンをインストール\n(('note:Install addons'))*))
 * user.jsを修正する\n(('note:Modify user.js'))
-* about:config\n(('note:Modify via about:config'))
+* システム全体の設定\n(('note:System-wide configuration'))
 
 = アドオンをインストール\n(('note:Install addons'))
 
@@ -206,7 +206,7 @@
 * 設定メニューからオプションを変更\n(('note:Tweak via options'))
 * アドオンをインストール\n(('note:Install addons'))
 * ((*user.jsを修正する\n(('note:Modify user.js'))*))
-* about:config\n(('note:Modify via about:config'))
+* システム全体の設定\n(('note:System-wide configuration'))
 
 = user.jsを修正する\n(('note:Modify user.js'))
 
