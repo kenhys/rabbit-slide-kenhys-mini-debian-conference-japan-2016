@@ -220,6 +220,25 @@
 
 最後のタブを閉じたときにウィンドウを閉じない\n(('note:Do not close window even though last tab is closed'))
 
+= user.jsは万能ではない\n(('note:user.js is suitable for specific purpose'))
+
+* プロファイルごとに設定\n(('note:Need to configure each profile'))
+* プロファイルで管理されていない項目は不可\n(('note:Outside of profile'))
+* 集中管理するのには不向き\n(('note:a'))
+* FirefoxSyncでよいのでは？\n(('note:FirefoxSync may be better solution?'))
+ 
+= カスタマイズいろいろ\n(('note:Customizing ...'))
+
+* 設定メニューからオプションを変更\n(('note:Tweak via options'))
+* アドオンをインストール\n(('note:Install addons'))
+* user.jsを修正する\n(('note:Modify user.js'))
+* ((*システム全体の設定\n(('note:System-wide configuration'))*))
+
+= システム全体の設定は\n(('note:How to do system-wide configuration?'))
+
+* /etc/firefox/*.js
+  * /etc/firefox/以下に置いた任意の.jsで設定できる
+
 = Debian固有の設定\n(('note:Debian specific configuration'))
 
 * 設定ファイルの場所
