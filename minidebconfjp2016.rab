@@ -292,10 +292,11 @@ pref("datareporting.healthreport.uploadEnabled", false);
 
 = IcedTeaプラグインを無効にするやり方を説明しよう
 
-= カスタマイズするアドオンの使い方\n(('note:Addon tips'))
+= カスタマイズのアドオン\n(('note:Addon tips'))
 
 * GlobalChrome.css
-* UI TextOverrider
+* UI Text Overrider
+* Force Addon Status
 
 = GlobalChrome.css
 
