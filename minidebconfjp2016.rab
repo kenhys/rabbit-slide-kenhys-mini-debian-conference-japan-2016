@@ -220,6 +220,58 @@
 
 最後のタブを閉じたときにウィンドウを閉じない\n(('note:Do not close window even though last tab is closed'))
 
+= Debian固有の設定\n(('note:Debian specific configuration'))
+
+* 設定ファイルの場所
+
+  /usr/lib/firefox/browser/defaults/syspref/firefox.js
+  -> /etc/firefox/firefox.js
+
+= Debian固有の設定(1)\n(('note:Debian specific configuration'))
+
+* 拡張の更新を有効\n(('note:Enable to update extensions'))
+
+    # enscript javascript
+    pref("extensions.update.enabled", true);
+
+= Debian固有の設定(2)\n(('note:Debian specific configuration'))
+
+* LANGに応じてロケールを設定\n(('note:Use LANG environment variable to choose locale'))
+
+    # enscript javascript
+    pref("intl.locale.matchOS", true);
+
+= Debian固有の設定(3)\n(('note:Debian specific configuration'))
+
+* 既定のブラウザチェック無効\n
+  (('note:Disable default browser checking'))
+
+    # enscript javascript
+    pref("browser.shell.checkDefaultBrowser", false);
+
+= Debian固有の設定(4)\n(('note:Debian specific configuration'))
+
+* OpenH264は無効\n(('note:Disable OpenH264'))
+
+    # enscript javascript
+    pref("media.gmp-gmpopenh264.enabled", false);
+
+= Debian固有の設定(5)\n(('note:Debian specific configuration'))
+
+* 新規タブはクラシックスタイルに\n
+  (('note:Default to classic view for about:newtab'))
+  
+    # enscript javascript
+    sticky_pref("browser.newtabpage.enhanced", false);
+
+= Debian固有の設定(6)\n(('note:Debian specific configuration'))
+
+* ヘルスレポートは無効\n
+  (('note:Disable health report upload'))
+
+    # enscript javascript
+    pref("datareporting.healthreport.uploadEnabled", false);
+
 = 組織向けにFirefoxを(('note:Firefox for organizations'))
 
 * 個人なら好きカスタマイズ
