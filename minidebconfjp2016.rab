@@ -65,6 +65,8 @@
 
 = 会場のみなさんに質問\n(('note:Question 1'))
 
+(('tag:center'))ブラウザは何を使っていますか？\n(('note:What browsers do you love?'))
+
 = ブラウザシェア
 
   # image
@@ -97,9 +99,11 @@
   # relative-height = 100
   # src = images/popcorn-firefox-esr.png
 
-= 会場のみなさんに質問
+= 会場のみなさんに質問\n(('note:Question 2'))
 
-(('tag:center'))Firefoxカスタマイズしていますか？
+(('tag:center'))Firefoxカスタマイズしていますか？\n
+(('note:Do you customize Firefox?'))
+
 
 = カスタマイズいろいろ\n(('note:Customizing ...'))
 
