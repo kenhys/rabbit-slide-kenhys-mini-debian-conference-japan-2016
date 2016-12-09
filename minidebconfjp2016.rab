@@ -323,51 +323,82 @@ https://en.wikipedia.org/wiki/McDonald's より引用
 
 * McD != マクドナルド\n(('note:McD is not McDonald's'))
 
-実際にカスタマイズする方法を説明する
-
-
-= Debian固有の設定\n(('note:Debian specific configuration'))
-
-* 設定ファイルの場所
-
-  /usr/lib/firefox/browser/defaults/syspref/firefox.js
-  -> /etc/firefox/firefox.js
-
-= 設定方法いろいろ
-
-* pref('...')
-* sticky_pref('...')
-* lockPref('...')
-
-
-= Debian固有の設定\n(('note:Debian specific configuration'))
-
-* 拡張の更新を有効
-
-   pref("extensions.update.enabled", true);
-
-= Debian固有の設定:ロケール
-
-* LANGに応じてロケールを設定\n
-  (('note:use LANG environment variable to choose locale'))
-
-   pref("intl.locale.matchOS", true);
-
-= ab
-
-// Disable default browser checking.
-pref("browser.shell.checkDefaultBrowser", false);
-
-// Disable openh264.
-pref("media.gmp-gmpopenh264.enabled", false);
-
-// Default to classic view for about:newtab
-sticky_pref("browser.newtabpage.enhanced", false);
-
-// Disable health report upload
-pref("datareporting.healthreport.uploadEnabled", false);
+TODO:実際にカスタマイズする方法を説明する
 
 = IcedTeaプラグインを無効にするやり方を説明しよう
+
+= firefox-support-common
+
+  # image
+  # relative-height = 70
+  # src = images/firefox-support-common.png
+
+* https://github.com/clear-code/firefox-support-common
+
+= firefox-support-common
+
+* カスタマイズ事例集のリポジトリ
+
+= firefox-support-common
+
+* configurations/customization-items.ods
+  * 具体的なカスタマイズ方法が記載
+
+= customization-items.ods
+
+カスタマイズ事例をタブで分類
+
+* customization-items
+* menuitem-shortcut-disable-items
+* misc-ui-disable-items
+
+= customization-items.ods
+
+カスタマイズ事例をタブで分類
+
+* ((*customization-items*))
+* menuitem-shortcut-disable-items
+* misc-ui-disable-items
+
+= customization-items
+
+* ポリシーを満たすための設定例
+  * セキュリティ
+  * プライバシー
+  * 自動更新
+* Firefox38/45ESRでの設定方法/設定内容
+
+= customization-items.ods
+
+カスタマイズ事例をタブで分類
+
+* customization-items
+* ((*menuitem-shortcut-disable-items*))
+* misc-ui-disable-items
+
+= menuitem-shortcut-disable-items
+
+* メニューのショートカットを無効にするための設定
+  * ショートカットから実行できてはまずい
+* Firefox38/45ESRでの設定方法/設定内容
+
+= customization-items.ods
+
+カスタマイズ事例をタブで分類
+
+* customization-items
+* menuitem-shortcut-disable-items
+* ((*misc-ui-disable-items*))
+
+= misc-ui-disable-items
+
+* 非表示にしたい項目の設定例
+  * 例:セキュリティパネル非表示化
+* Firefox38/45ESRでの設定方法/設定内容
+
+= どうやって?\n(('note:How?'))
+
+* カスタマイズ用のアドオンを活用\n
 
 = カスタマイズのアドオン\n(('note:Addon tips'))
 
