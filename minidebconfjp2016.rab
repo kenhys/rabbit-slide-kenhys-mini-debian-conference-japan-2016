@@ -156,8 +156,8 @@
 
 = インストールのされかた\n(('note:How xpi is installed?'))
 
-* xpiそのままインストール\n(('note:installl xpi as is'))
-* 展開済みのaddonとしてインストール\n(('note:unpacked addons'))
+* xpiそのままインストール\n(('note:Install xpi as is'))
+* 展開済みのaddonとしてインストール\n(('note:Install as unpacked addon'))
 
 = 拡張はどこに？\n(('note:Where is extension installed?'))
 
@@ -223,8 +223,8 @@
 = user.jsは万能ではない\n(('note:user.js is suitable for specific purpose'))
 
 * プロファイルごとに設定\n(('note:Need to configure each profile'))
-* プロファイルで管理されていない項目は不可\n(('note:Outside of profile'))
-* 集中管理するのには不向き\n(('note:a'))
+* プロファイルで管理されていない項目は不可\n(('note:It should be managed by profile'))
+* 集中管理するのには不向き\n(('note:Not suitable for centralized management'))
 * FirefoxSyncでよいのでは？\n(('note:FirefoxSync may be better solution?'))
  
 = カスタマイズいろいろ\n(('note:Customizing ...'))
@@ -237,11 +237,11 @@
 = システム全体の設定は\n(('note:How to do system-wide configuration?'))
 
 * /etc/firefox/*.js
-  * /etc/firefox/以下に置いた任意の.jsで設定できる
+  * /etc/firefox/以下に置いた任意の.jsで設定できる\n(('note:Any *.js is ok under /etc/firefox/'))
 
 = Debian固有の設定\n(('note:Debian specific configuration'))
 
-* 設定ファイルの場所
+* 設定ファイルの場所\n(('note:The configuration file is:'))
 
   /usr/lib/firefox/browser/defaults/syspref/firefox.js
   -> /etc/firefox/firefox.js
