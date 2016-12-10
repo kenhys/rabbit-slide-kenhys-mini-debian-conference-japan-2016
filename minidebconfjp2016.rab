@@ -375,9 +375,7 @@
 = autoconfig.jsc
 
 * ネットワーク経由で参照可能な場所に配置
-
-    # enscript javascript
-    pref('...');
+  * 中身は単なるprefやlockPref
 
 = こんなときどうする？
 
@@ -461,7 +459,7 @@
 
 = どうやって?\n(('note:How?'))
 
-* カスタマイズ用のアドオンを活用\n
+* カスタマイズ用のアドオンを活用\n(('note:Use specific addons to customize'))
 
 = カスタマイズのアドオン\n(('note:Addon to customize'))
 
@@ -517,7 +515,7 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
 * odsに記載のサンプルコードをコピペ
 * 目的に応じて設定例をコピペ
 
-= GlobalChrome.css(1)
+= GlobalChrome.css
 
     # enscript css
     @-moz-document url-prefix("chrome://browser/content/browser.xul") {
@@ -561,7 +559,7 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
     setKillItemRule("hiddenItemsWithDelay", hiddenItemsWithDelay.join(","), true,  false);
     
 
-= Force Addon Status(1)
+= Force Addon Status
 
     # enscript javascript
     lockPref("extensions.force-addon-status@clear-code.com.plugins.0.pattern", "^Java(\\(TM\\)| )");
