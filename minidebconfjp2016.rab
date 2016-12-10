@@ -478,6 +478,7 @@
 = GlobalChrome.css
 
 * ユーザースタイルシート機能\n(('note:Provides user stylesheet'))
+  * globalChrome.cssを所定の場所に配置\n(('note:Put globalChrome.css in specific path'))
 * https://addons.mozilla.org/ja/firefox/addon/globalchromecss/
 
 = カスタマイズのアドオン\n(('note:Addon to customize'))
@@ -513,10 +514,21 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
 
 = 使い方
 
-* サンプルコードをコピペ
-* 設定例をコピペ
+* odsに記載のサンプルコードをコピペ
+* 目的に応じて設定例をコピペ
 
-= サンプルコード(1)
+= GlobalChrome.css(1)
+
+    # enscript css
+    @-moz-document url-prefix("chrome://browser/content/browser.xul") {
+      （セレクタ）,
+      *[always-hidden="true"] {
+        display: none !important;
+        -moz-user-focus: ignore !important;
+      }
+    }
+
+= UI Text Overrider(1)
 
     # enscript javascript
     // disable shortcuts and UI
@@ -524,12 +536,12 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
     var killedItemsWithDelay = [];
     var hiddenItemsWithDelay = [];
 
-= サンプルコード(2)
+= UI Text Overrider(2)
 
     # enscript javascript
     killedItems.push("(ここにセレクタを記載)");
 
-= サンプルコード(3)
+= UI Text Overrider(3)
 
     # enscript javascript
     function setKillItemRule(aIdentifier, aSelector, aDelayed, aDisableCommand) {
@@ -549,17 +561,11 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
     setKillItemRule("hiddenItemsWithDelay", hiddenItemsWithDelay.join(","), true,  false);
     
 
-= GlobalChrome.cssの例
+= Force Addon Status(1)
 
-    # enscript css
-    @-moz-document url-prefix("chrome://browser/content/browser.xul") {
-      （セレクタ）,
-      /* MenuShortcut-common */
-      *[always-hidden="true"] {
-        display: none !important;
-        -moz-user-focus: ignore !important;
-      }
-    }
+    # enscript javascript
+    lockPref(""extensions.force-addon-status@clear-code.com.plugins.0.pattern"", ""^Java(\\(TM\\)| )"");
+    lockPref(""extensions.force-addon-status@clear-code.com.plugins.0.enabledState"", 0);"
 
 = まとめ
 
