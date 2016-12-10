@@ -318,33 +318,69 @@
 
 = 組織向けにFirefoxを(('note:Firefox for organizations'))
 
-* 個人なら好きカスタマイズ
-* 組織利用はまた別の話に
+* 個人なら好きにカスタマイズでいい
+* 組織利用はまた別の観点が必要
 
-での利用は= 組織内向けカスタマイズ(('note:How to customize for organization'))
+= 組織利用の観点だと\n(('note:Point of view from organizations'))
 
-https://www.mozilla.jp/business/
+* プロキシの設定をしたい
+* 統計情報は送りたくない
+* 勝手にアップデートしない
 
-= 参考記事の紹介\n(('note:Blog entry how to customize'))
+= 組織内向けカスタマイズ(('note:How to customize for organization'))
+
+* https://www.mozilla.jp/business/
+
+= 参考記事の紹介(1)\n(('note:Blog entry how to customize'))
 
 「Firefox・Thunderbirdの組織内向けカスタマイズの方法の簡単な紹介と比較」
 * http://www.clear-code.com/blog/2014/3/27.html
 
-= McD?
+= 参考記事の紹介(2)\n(('note:Blog entry how to customize'))
 
-    # image
-    # relative-height = 80
-    # src = https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/274px-McDonald%27s_Golden_Arches.svg.png
+* user.js
+* MCD
+* ActiveDirectoryのポリシー
+* CCK2 Wizard
+* その他
 
-https://en.wikipedia.org/wiki/McDonald's より引用
+= MCD?
 
-= McDとは?\n(('note: What is McD?'))
+* McDonald?
 
-* McD != マクドナルド\n(('note:McD is not McDonald's'))
+= MCDとは?\n(('note: What is MCD?'))
 
-TODO:実際にカスタマイズする方法を説明する
+* Mission Control Desktop
+* Netscape由来の集中管理機構
+   * autoconfig.jsとautoconfig.cfg
 
-= IcedTeaプラグインを無効にするやり方を説明しよう
+= autoconfig.js
+
+* /usr/lib/firefox/pref/autoconfig.js
+
+    # enscript javascript
+    pref("general.config.filename", "autoconfig.cfg");
+    pref("general.config.vendor", "autoconfig");
+    pref("general.config.obscure_value", 0);
+
+= autoconfig.cfg
+
+* /usr/lib/firefox/autoconfig.cfg
+
+    # enscript javascript
+    // 1行目は必ずコメントとしてください。
+    lockPref("autoadmin.global_config_url", "http://xxx/autoconfig.jsc");
+
+= autoconfig.jsc
+
+* ネットワーク経由で参照可能な場所に配置
+
+    # enscript javascript
+    pref('...');
+
+= こんなときどうする？
+
+* 設定例がわからなくて困った
 
 = firefox-support-common
 
@@ -460,28 +496,19 @@ TODO:実際にカスタマイズする方法を説明する
 
 https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
 
-= できること
+= できることの一例
 
 * 単機能アドオンの組み合わせでkiosk端末っぽく
 
 * 参考:全部入りのkioskモード
   * https://addons.mozilla.org/ja/firefox/addon/mkiosk/
 
-= SecurityPanel非表示
+= 使い方
 
-    # enscript stylesheet
-    @-moz-document
-    url-prefix("chrome://browser/content/preferences/in-content/preferences.xul"),
-    url-prefix("about:preferences") {
-      #category-security {
-        visibility: collapse !important;
-        -moz-user-focus: ignore !important;
-      }
-    }
+* サンプルコードをコピペ
+* 設定例をコピペ
 
-= 使い方(1)
-
-* 無効化する
+= サンプルコード(1)
 
     # enscript javascript
     // disable shortcuts and UI
@@ -489,12 +516,12 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
     var killedItemsWithDelay = [];
     var hiddenItemsWithDelay = [];
 
-= 使い方(2)
+= サンプルコード(2)
 
     # enscript javascript
-    killedItems.push("...");
+    killedItems.push("(ここにセレクタを記載)");
 
-= 使い方(3)
+= サンプルコード(3)
 
     # enscript javascript
     function setKillItemRule(aIdentifier, aSelector, aDelayed, aDisableCommand) {
