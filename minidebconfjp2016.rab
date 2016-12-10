@@ -329,7 +329,8 @@
 
 = 組織内向けカスタマイズ(('note:How to customize for organization'))
 
-* https://www.mozilla.jp/business/
+* Mozilla Japan 法人向け情報
+  * https://www.mozilla.jp/business/
 
 = 参考記事の紹介(1)\n(('note:Blog entry how to customize'))
 
@@ -350,7 +351,7 @@
 
 = MCDとは?\n(('note: What is MCD?'))
 
-* Mission Control Desktop
+* ((*M*))ission ((*C*))ontrol ((*D*))esktop
 * Netscape由来の集中管理機構
    * autoconfig.jsとautoconfig.cfg
 
@@ -382,6 +383,13 @@
 
 * 設定例がわからなくて困った
 
+  * 「技術的なよくある質問」
+     * https://www.mozilla.jp/business/faq/tech/
+
+= こんなときどうする？
+
+* 「技術的なよくある質問」をみても解決しない
+
 = firefox-support-common
 
   # image
@@ -392,12 +400,12 @@
 
 = firefox-support-common
 
-* カスタマイズ事例集のリポジトリ
+* カスタマイズ事例集のリポジトリ\n(('note:There are use cases in this repository'))
 
 = firefox-support-common
 
 * configurations/customization-items.ods
-  * 具体的なカスタマイズ方法が記載
+  * 具体的なカスタマイズ方法が記載\n(('note:Practical use cases are there'))
 
 = customization-items.ods
 
