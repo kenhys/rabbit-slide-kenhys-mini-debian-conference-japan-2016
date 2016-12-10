@@ -564,8 +564,8 @@ https://addons.mozilla.org/ja/firefox/addon/force-addon-status/
 = Force Addon Status(1)
 
     # enscript javascript
-    lockPref(""extensions.force-addon-status@clear-code.com.plugins.0.pattern"", ""^Java(\\(TM\\)| )"");
-    lockPref(""extensions.force-addon-status@clear-code.com.plugins.0.enabledState"", 0);"
+    lockPref("extensions.force-addon-status@clear-code.com.plugins.0.pattern", "^Java(\\(TM\\)| )");
+    lockPref("extensions.force-addon-status@clear-code.com.plugins.0.enabledState", 0);"
 
 = まとめ
 
