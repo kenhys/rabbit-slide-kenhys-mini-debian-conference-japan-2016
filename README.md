@@ -1,6 +1,6 @@
-# TODO: スライドのタイトル
+# DebianでFirefoxをカスタマイズするには
 
-TODO: スライドの説明
+2016/12/10にサイボウズ株式会社にて開催された[Mini Debian Conference Japan 2016](http://miniconf.debian.or.jp/)の発表資料です。
 
 ## 作者向け
 
